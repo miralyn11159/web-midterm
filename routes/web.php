@@ -27,3 +27,5 @@ Route::get('/home', [
 
 
 Route::resource('orders', App\Http\Controllers\OrderController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);

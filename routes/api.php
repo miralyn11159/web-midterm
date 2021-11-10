@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\OrderControllerAPI;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('orders',[\App\Http\Controllers\API\OrderControllerAPI::class,'index']);
+// Route::get('orders',[\App\Http\Controllers\API\OrderControllerAPI::class,'index']);
+
+Route::post('login',[OrderControllerAPI::class,'login']);
+Route::post('register',[OrderControllerAPI::class,'register']);
+
+
