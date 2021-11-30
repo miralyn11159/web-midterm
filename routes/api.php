@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\OrderControllerAPI;
-
+use App\Http\Controllers\API\OrderPostController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,3 +25,8 @@ Route::post('login',[OrderControllerAPI::class,'login']);
 Route::post('register',[OrderControllerAPI::class,'register']);
 
 
+
+
+Route::get('get-all-posts',[OrderPostController::class,'getAllPosts']);
+Route::get('get-post',[OrderPostController::class,'getPost']);
+Route::get('search-post',[OrderPostController::class,'searchPost']);
